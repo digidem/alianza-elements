@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/digidem/alianza-elements/issues"
   },
-  "homepage": "https://github.com/digidem/alianza-elements#readme"
+  "homepage": "https://github.com/digidem/alianza-elements#readme",
+  "dependencies": {
+    "mapbox-gl": "^0.39.1",
+    "sheetify": "^6.1.1",
+    "yo-yo": "^1.4.1"
+  },
+  "browserify": {
+    "transform": [ "sheetify" ]
+  }
 }
