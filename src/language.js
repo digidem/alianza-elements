@@ -24,9 +24,9 @@ module.exports = function (updateLang, lang) {
       background: white;
     }
     :host .btn {
-      border: none;
-      padding: 10px;
-      font-size: 16px;
+      font-size: 14px;
+      font-family: sans-serif;
+      text-transform: uppercase;
       font-weight: bold;
     }
   `
