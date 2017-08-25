@@ -1,0 +1,24 @@
+{
+  "name": "alianza-elements",
+  "version": "1.0.0",
+  "description": " Shared UI elements for the alianza-ceibo maps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digidem/alianza-elements.git"
+  },
+  "keywords": [
+    "alianza-ceibo",
+    "maps",
+    "mapbox-gl"
+  ],
+  "author": "Karissa McKelvey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digidem/alianza-elements/issues"
+  },
+  "homepage": "https://github.com/digidem/alianza-elements#readme"
+}
