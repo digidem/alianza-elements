@@ -1,6 +1,6 @@
 {
   "name": "alianza-elements",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": " Shared UI elements for the alianza-ceibo maps",
   "main": "index.js",
   "scripts": {
@@ -27,6 +27,8 @@
     "yo-yo": "^1.4.1"
   },
   "browserify": {
-    "transform": [ "sheetify" ]
+    "transform": [
+      "sheetify"
+    ]
   }
 }
