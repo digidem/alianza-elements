@@ -14,15 +14,30 @@ module.exports = function (updateLang, lang) {
     :host > .btn:hover {
       cursor: pointer;
     }
+    :host input[type="radio"] {
+      display: none;
+    }
+    :host input[type="radio"] {
+      display: none;
+    }
+    :host .btn.active {
+      background: white;
+    }
+    :host .btn {
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+    }
   `
 
   var el = yo`<div class=${style}>
     <div class="btn-group" data-toggle="buttons">
-      <label class="btn btn-outline-primary ${lang === 'es' ? 'active' : ''}">
+      <label class="btn ${lang === 'es' ? 'active' : ''}">
         <input type="radio" onclick=${handleClick} checked="${lang === 'es'}" name="language" id="es" autocomplete="off" />
         Español
       </label>
-      <label class="btn btn-outline-primary ${lang === 'en' ? 'active' : ''}">
+      <label class="btn ${lang === 'en' ? 'active' : ''}">
         <input type="radio" onclick=${handleClick} checked="${lang === 'en'}" name="language" id="en" autocomplete="off" />
         English
       </label>
