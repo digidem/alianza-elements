@@ -1,5 +1,6 @@
 module.exports = {
-  backButton: require('./back_button'),
-  popup: require('./yo-popup'),
-  button: require('./lib/button')
+  language: require('./src/language'),
+  backButton: require('./src/back_button'),
+  popup: require('./src/yo-popup'),
+  button: require('./src/button')
 }

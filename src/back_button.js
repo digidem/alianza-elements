@@ -1,4 +1,4 @@
-var button = require('./lib/button')
+var button = require('./button')
 
 module.exports = backButton
 

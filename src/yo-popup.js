@@ -1,3 +1,4 @@
+const xtend = require('xtend')
 const yo = require('yo-yo')
 const css = require('sheetify')
 const mapboxgl = require('mapbox-gl')
@@ -7,22 +8,29 @@ module.exports = Popup
 function Popup (map, opts) {
   if (!(this instanceof Popup)) return new Popup(map, opts)
   this.map = map
-  this.popup = new mapboxgl.Popup(opts || {
+  this.popup = new mapboxgl.Popup(xtend({
     closeButton: true,
     closeOnClick: false
-  })
+  }, opts))
+
   var styles = css`
+
+    html .mapboxgl-popup-tip {
+      opacity: 0;
+    }
+
     html .mapboxgl-popup-content {
       padding: 0;
     }
 
+
     html .mapboxgl-popup-close-button {
       color: white;
       z-index: 99;
-      right: -8.5px;
+      right: -4.5px;
       top: -13.5px;
-      width: 20px;
-      height: 20px;
+      width: 5px;
+      height: 13px;
       margin-left: 0px;
       font-size: 18px;
     }
