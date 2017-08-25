@@ -15,7 +15,8 @@ function backButton (lang, onclick) {
   backButton.style.filter = 'alpha(opacity=0.8)'
   backButton.style.display = 'none'
   backButton.style.position = 'absolute'
-  backButton.style.right = 0
+  backButton.style.right = '0'
+  backButton.style.top = '35px'
   backButton.style.margin = '20px'
   return backButton
 }
