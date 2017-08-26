@@ -1,4 +1,5 @@
-var yo = require('yo-yo')
+const yo = require('yo-yo')
+const qs = require('querystring')
 const css = require('sheetify')
 
 module.exports = function (updateLang, lang) {
@@ -50,6 +51,10 @@ module.exports = function (updateLang, lang) {
     var unChecked = el.querySelector('input[type=radio]:not(:checked)')
     checked.parentNode.classList.add('active')
     unChecked.parentNode.classList.remove('active')
+    var query = qs.parse(window.location.search.replace('?', ''))
+    query.lang = checked.id
+    var newurl = window.location.origin + '/?' + qs.stringify(query) + window.location.hash
+    window.history.replaceState({},'',newurl);
     updateLang(checked.id)
   }
 
