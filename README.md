@@ -25,13 +25,12 @@ css('alianza-elements/style.css')
 
 ### `backButton([lang], onclick)`
 
-A button that returns to the full map view. `lang` defaults to `es`.
+A button that returns to the full map view. Will be visible above the `stop` zoom. `lang` defaults to `es`.
 
 ```js
-var button = elements.backButton(lang, function () {
+var button = elements.backButton(map, {lang: 'es', stop: 11.93}, function () {
   map.fitBounds(...)
 })
-document.body.appendChild(button)
 ```
 
 ### `Popup(map)`
