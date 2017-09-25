@@ -53,7 +53,7 @@ module.exports = function (updateLang, lang) {
     unChecked.parentNode.classList.remove('active')
     var query = qs.parse(window.location.search.replace('?', ''))
     query.lang = checked.id
-    var newurl = window.location.origin + '/?' + qs.stringify(query) + window.location.hash
+    var newurl = window.location.origin + '?' + qs.stringify(query) + window.location.hash
     window.history.replaceState({},'',newurl);
     updateLang(checked.id)
   }
