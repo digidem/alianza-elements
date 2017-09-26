@@ -14,16 +14,12 @@ function Popup (map, opts) {
   }, opts))
 
   var styles = css`
-
     html .mapboxgl-popup-tip {
       opacity: 0;
     }
-
     html .mapboxgl-popup-content {
       padding: 0;
     }
-
-
     html .mapboxgl-popup-close-button {
       color: white;
       z-index: 99;

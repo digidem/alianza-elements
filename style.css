@@ -1,5 +1,10 @@
-/** tidbits from Bootstrap for the popups **/
+.mapboxgl-map {
+  font-size: 12px;
+  line-height: 20px; 
+  font: inherit !important;
+}
 
+/** tidbits from Bootstrap for the popups **/
 .btn {
   z-index: 1;
   padding: 15px;
