@@ -12,7 +12,7 @@ function BackButton (map, opts, onclick) {
   this.onclick = onclick
   this.map = map
   this.stop = opts.stop || 10
-  this.language = opts.lang || 'es'
+  this.language = opts.language || 'es'
   this.redraw.bind(this)
   this.el = this._getElement()
   document.body.appendChild(this.el)
