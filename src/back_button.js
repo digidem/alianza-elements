@@ -1,10 +1,10 @@
 const yo = require('yo-yo')
 var button = require('./button')
 
-module.exports = backButton
+module.exports = BackButton
 
-function backButton (map, opts, onclick) {
-  if (!(this instanceof backButton)) return new backButton(map, opts, onclick)
+function BackButton (map, opts, onclick) {
+  if (!(this instanceof BackButton)) return new BackButton(map, opts, onclick)
   if (typeof opts === 'function') {
     onclick = opts
     opts = {}
@@ -12,7 +12,7 @@ function backButton (map, opts, onclick) {
   this.onclick = onclick
   this.map = map
   this.stop = opts.stop || 10
-  this.lang = opts.lang || 'es'
+  this.language = opts.lang || 'es'
   this.redraw.bind(this)
   this.el = this._getElement()
   document.body.appendChild(this.el)
@@ -20,12 +20,17 @@ function backButton (map, opts, onclick) {
   this.redraw()
 }
 
-backButton.prototype.redraw = function () {
+BackButton.prototype.update = function () {
+  yo.update(this.el, this._getElement())
+  this.redraw()
+}
+
+BackButton.prototype.redraw = function () {
   if (this.map.getZoom() > this.stop) this.el.style.display = ''
   else this.el.style.display = 'none'
 }
 
-backButton.prototype._getElement = function () {
+BackButton.prototype._getElement = function () {
   var self = this
   var translations = {
     'es': 'VER MAPA COMPLETO',
@@ -41,10 +46,4 @@ backButton.prototype._getElement = function () {
   backButton.style.top = '40px'
   backButton.style.margin = '20px'
   return backButton
-}
-
-backButton.prototype.updateLang = function (lang) {
-  this.lang = lang
-  yo.update(this.el, this._getElement())
-  this.redraw()
 }
