@@ -43,7 +43,7 @@ BackButton.prototype._getElement = function () {
   backButton.style.filter = 'alpha(opacity=0.8)'
   backButton.style.position = 'absolute'
   backButton.style.right = '0'
-  backButton.style.top = '40px'
-  backButton.style.margin = '20px'
+  backButton.style.top = '0px'
+  backButton.style.margin = '10px'
   return backButton
 }

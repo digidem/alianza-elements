@@ -33,6 +33,13 @@ var button = elements.backButton(map, {lang: 'es', stop: 11.93}, function () {
 })
 ```
 
+Updating button language uses the `update` function
+
+```
+button.language = 'en'
+button.update()
+```
+
 ### `Popup(map)`
 
 A base popup that uses `yo` under the hood. `update` takes an HTML element and updates the dom for the popup.
