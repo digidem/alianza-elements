@@ -1,6 +1,6 @@
 {
   "name": "alianza-elements",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": " Shared UI elements for the alianza-ceibo maps",
   "main": "index.js",
   "scripts": {
